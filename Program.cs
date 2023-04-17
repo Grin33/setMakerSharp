@@ -16,7 +16,6 @@ namespace setMakerSharp
         static object locker = new();
         static List<List<int>> fin = new List<List<int>>();
         static List<int> mass = new List<int> { 2, 3, 5, 7, 1, 2, 1, 1, 6, 4, 4, 6, 4, 2 };
-        //static List<int> mass = new List<int> { 1,4,5,0 };
         static void Print_Mass(ref List<int> mass1)
         {
             foreach(int v in mass1)
@@ -45,10 +44,7 @@ namespace setMakerSharp
                 {
                     foreach (List<int> v in fin)
                     {
-                        if ((mass1.SequenceEqual(v)) || (mass_temp.SequenceEqual(v)))
-                        {
-                            check = false;
-                        }
+                        if ((mass1.SequenceEqual(v)) || (mass_temp.SequenceEqual(v))){ check = false; }
                     }
                     if (check)
                     {
@@ -58,19 +54,6 @@ namespace setMakerSharp
                     }
 
                 }
-                //foreach(List<int> v in fin)
-                //{
-                //    if ((mass1.SequenceEqual(v)) || (mass_temp.SequenceEqual(v)))
-                //    {
-                //        check = false;
-                //    }
-                //}
-                //if (check)
-                //{
-                //    fin.Add(mass1);
-                //    fin.Add(mass_temp);
-                //    Print_Mass(mass1); Console.Write(" = "); Print_Mass(mass_temp); Console.WriteLine();
-                //}
                 return false;
             }
         }
@@ -120,11 +103,6 @@ namespace setMakerSharp
             sw.Stop();
             Console.WriteLine("Time Taken for Parallel: " + sw.Elapsed);
             Console.WriteLine("Time Taken for Straight: " + temptime);
-
-            //foreach(List<int> v in fin)
-            //{
-            //    Print_Mass(v); Console.WriteLine();
-            //}
         }
     }
 }
