@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Задача разбиения множеств : на вход поступает множество чисел.
+//Требуется разбить это множество на два, с одинаковой суммой чисел в обеих.
+//Использовать Параллелизм
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Threading;
