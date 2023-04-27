@@ -146,6 +146,27 @@ namespace test1
             {
                 lock (locker)
                 {
+                    if ((fin != null) && (x != null))
+                        for (int i = 0; i < x.Count; i+=2)
+                        {
+                            for (int j = 0; j < fin.Count; j+=2)
+                            {
+                                if(i != x.Count)
+                                {
+                                    var temp = fin[j];
+                                    var temp1 = fin[j + 1];
+                                    var temp2 = x[i];
+                                    var temp3 = x[i + 1];
+                                    if (temp.SequenceEqual(temp2) || temp1.SequenceEqual(temp3)) ;
+                                    {
+                                        x.RemoveAt(i); x.RemoveAt(i);
+                                        i -= 2;
+                                        break;
+                                    }
+                                }
+                                    
+                            }
+                        }
                     fin.AddRange(x);
                 }
             }
